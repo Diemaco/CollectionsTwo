@@ -20,13 +20,22 @@ def generatePassword(letters='abcdefghijklmnopqrstuvwxyz', cijfers='0123456789',
         new_pass += [letters.upper()[random.randrange(len(letters))]]
 
     for i in range(aantal_letters):
-        new_pass.insert(random.randrange(0, len(new_pass) - 1), letters[random.randrange(len(letters))])
+        new_pass.insert(
+            random.randrange(0, len(new_pass) - 1),
+            letters[random.randrange(len(letters))]
+        )
 
     for i in range(aantal_speciaal):
-        new_pass.insert(random.randrange(1, len(new_pass) - 1), speciaal[random.randrange(len(speciaal))])
+        new_pass.insert(
+            random.randrange(1, len(new_pass) - 1),
+            speciaal[random.randrange(len(speciaal))]
+        )
 
     for i in range(aantal_cijfers):
-        new_pass.insert(random.randrange(4, len(new_pass) - 1), cijfers[random.randrange(len(cijfers))])
+        new_pass.insert(
+            random.randrange(4, len(new_pass) - 1),
+            cijfers[random.randrange(len(cijfers))]
+        )
 
     return ''.join(new_pass)
 

@@ -1,8 +1,11 @@
-dict = {}
+booschappen = {}
 
-while True:
-    answer = input('Wat wilt u hebben?')
-    amount = int(input('How much do you need'))
+while input('Wilt u iets toevoegen aan uw boodschappenlijstje?') != 'nee':
+    wat = input('Wat wilt toevoegen aan uw boodschappenlijstje?')
+    hoeveel = int(input('Hoeveel wilt u daarvan?'))
 
-    if answer == "nee":
-        break
+    booschappen[wat] = hoeveel
+
+print('Broodschappenlijstje:')
+for boodschap in booschappen:
+    print('{:<6} - {:}'.format(booschappen.get(boodschap),  boodschap))
